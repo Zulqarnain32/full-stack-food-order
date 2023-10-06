@@ -1,0 +1,511 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  font-family: 'Poppins',sans-serif;
+}
+:root{
+  --malta:rgb(255, 123, 0);
+}
+::-webkit-scrollbar{
+  display: none;
+}
+body{
+  overflow-x: hidden;
+}
+nav{
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  height: 70px;
+  width: 100%;
+  box-shadow: 0px 0px 10px -4px black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 60px;
+  background-color: #fff;
+}
+.logo{
+  display: flex;
+  align-items: center;
+}
+.logo-img{
+  height: 60px;
+  width: 60px;
+}
+.nav-links{
+  text-decoration: none;
+  color: #000000;
+  margin-left: 30px;
+  font-weight: 700;
+}
+.nav-links button, .common-btn{
+  height: 40px;
+  padding: 0 13px;
+  border: none;
+  cursor: pointer;
+  background-color: var(--malta);
+  color: #fff;
+  border-radius: 4px;
+}
+.company-name{
+  margin-left: 10px ;
+  font-weight: 700;
+  font-size: 23px;
+}
+.company{
+  color: var(--malta);
+}
+.cart-icon{
+  font-size: 20px;
+  margin-top: 0px;
+  margin-bottom: -3px;
+}
+.cart-link{
+  position: relative;
+  margin-right: 20px;
+
+}
+.cart-qty{
+  position: absolute;
+  left: 25px;
+  background-color: var(--malta);
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 20px;
+  font-size: 10px;
+  color: #fff;
+}
+
+ /*? Home Page CSS */
+
+ .home-container{
+  height: calc(100vh - 70px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 100px;
+ }
+ .content{
+  margin-top: 12px;
+  line-height: 30px;
+  text-align: justify;
+  margin-bottom: 20px;
+ }
+
+/*? Registeration Page Css */
+
+.register-container{
+  height: calc(100vh - 70px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.form_main {
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(255, 255, 255);
+  padding: 30px 30px 30px 30px;
+  box-shadow: 0px 0px 15px 10px rgba(34, 33, 33, 0.062);
+  position: relative;
+  overflow: hidden;
+}
+.form_main::before {
+  position: absolute;
+  content: "";
+  width: 300px;
+  height: 300px;
+  background-color: rgb(209, 193, 255);
+  transform: rotate(45deg);
+  left: -180px;
+  bottom: 30px;
+  z-index: 1;
+  border-radius: 30px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.082);
+}
+.heading {
+  font-size: 2em;
+  color: #2e2e2e;
+  font-weight: 700;
+  margin: 5px 0 10px 0;
+  z-index: 2;
+}
+.inputContainer {
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+.inputIcon {
+  position: absolute;
+  left: 3px;
+}
+.inputField {
+  width: 100%;
+  height: 30px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid rgb(173, 173, 173);
+  margin: 10px 0;
+  color: black;
+  font-size: 17px;
+  font-weight: 500;
+  box-sizing: border-box;
+  padding-left: 0px;
+}
+
+.inputField:focus {
+  outline: none;
+  border-bottom: 2px solid rgb(199, 114, 255);
+}
+
+.inputField::placeholder {
+  color: rgb(80, 80, 80);
+  font-size: 1em;
+  font-weight: 500;
+}
+
+.button {
+  z-index: 2;
+  position: relative;
+  width: 100%;
+  border: none;
+  background-color: rgb(162, 104, 255);
+  height: 30px;
+  color: white;
+  font-size: .8em;
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: rgb(126, 84, 255);
+}
+.account {
+  z-index: 2;
+  font-size: 13px;
+  font-weight: 500;
+  color: rgb(44, 24, 128);
+  /* text-decoration: none; */
+  padding: 8px 15px;
+  border-radius: 20px;
+}
+.error{
+  color: red;
+  position: relative;
+  z-index: 4;
+  margin-top: 7px;
+  font-size: 14px;
+}
+
+/*? Food Page Css */
+.food-parent-container{
+  background-color: rgb(243, 243, 243);
+  margin-top: 0px;
+  padding-top: 40px;
+}
+.food-container{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 96%;
+  margin: 30px auto;
+}
+.food-container .single-food{
+  flex-basis: 17.7%;
+  margin-bottom: 30px;
+  background-color: #fff;
+  overflow: hidden;
+  padding: 10px 20px;
+}
+.food-img-box{
+  text-align: center;
+}
+.food-img{
+  width: 190px;
+  height: 160px;
+  transition: .4s;
+}
+.food-img:hover{
+  transform: scale(1.07);
+}
+
+.nav-and-search{
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 96%;
+  margin: 0 auto;
+}
+.nav-and-search button{
+  padding: 0 10px;
+  height: 37px;
+  background-color: var(--malta);
+  color: #fff;
+  cursor: pointer;
+  margin-right: 4px;  
+  border: none;
+}
+.nav-and-search button:hover,  
+.nav-and-search button:focus{
+  background-color: rgb(208, 72, 27);
+}
+
+/* .cart- detail ye cart open krny wala button hai */
+.cart-detail{
+  font-size: 26px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: rgb(255, 255, 255);
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 3px 3px 10px rgb(173, 173, 173);
+}
+.cart-detail:hover{
+ font-size: 20px;
+  box-shadow: inset -3px -3px 7px 2px rgb(173, 173, 173);
+}
+.cart-btn-animate{
+   animation: animate 1s linear infinite;
+}
+
+@keyframes animate{
+    0%{
+      bottom: 30px;
+    }
+    50%{
+      bottom: 50px;
+    }
+    100%{
+      bottom: 30px;
+    }
+}
+
+.search-field{
+  height: 37px;
+  padding: 0 12px;
+  font-size: 16px;
+  outline: none;
+  border: none;
+}
+.items{
+  margin-left: 10px;
+  margin-top: -5px;
+}
+.name-and-price{
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+  font-size: 14px;
+}
+.food-price{
+   color: var(--malta);
+   font-weight: 700;
+   text-align: right !important;
+}
+.food-description{
+  margin: 10px 0;
+  text-align: justify;
+}
+.star{
+  color: yellow;
+  margin-top: 3px;
+  font-size: 20px;
+}
+.add-to-cart{
+  height: 30px;
+  padding: 0 7px;
+  border: none;
+  cursor: pointer;
+  background-color: var(--malta);
+  color: #fff;
+}
+.add-to-cart:hover{
+  background-color: rgb(208, 72, 27);
+}
+
+
+/*? ye side wali cart ki css hai  */
+
+.cart-container{
+  background-color: rgb(255, 255, 255);
+  margin-top: 40px;
+  position: fixed;
+  top: 70px;
+  right: -300px;
+  width: 300px;
+  padding: 20px 10px;
+  box-shadow: -4px 4px 12px rgb(219, 219, 219);
+  transition: .3s;
+  padding-bottom: 100px;
+  height: 500px;
+  overflow-y: scroll;
+}
+.animate{
+  right: 0;
+}
+.remove-cart{
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  height: 30px;
+  width: 30px;
+  background-color: red;
+  cursor: pointer;
+  color: #fff;
+  border: none;
+  font-weight: 900 !important;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cart-img{
+  height: 55px;
+  width: 55px;
+}
+.summary{
+  font-size: 25px;
+  margin-bottom: 30px;
+}
+.cart-item{
+   margin-bottom: 10px;
+   display: flex;
+   align-items: center;
+   box-shadow: 3px 3px 10px rgb(216, 216, 216);
+   width: 90%;
+   margin: 15px auto;
+   position: relative;
+}
+.single-item-detail{
+  margin-left: 10px;
+}
+.cart-item-name{
+  font-weight: 700;
+  font-size: 14px;
+}
+.cart-item-price{
+  font-weight: 700;
+  color: var(--malta);
+  margin-top:3px;
+  padding-top: 5px;
+}
+.delete{
+  position: absolute;
+  right: 6px;
+  cursor: pointer;
+  font-size: 15px;
+  top: 7px;
+}
+.delete:hover{
+  color: red;
+}
+.btn{
+  height: 20px;
+  width: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid black;
+  font-weight: 900;
+  font-size: 18px;
+  cursor: pointer;
+}
+.incr{
+  position: absolute;
+  bottom: 7px;
+  right: 6px;
+}
+.decr{
+  position: absolute;
+  bottom: 7px;
+  right: 60px;
+  padding-bottom: 3px;
+}
+.cart-item-qty{
+  position: absolute;
+  bottom: 5px;
+  right: 40px;
+  color: var(--malta);
+  font-weight: 700;
+}
+.price-and-quantity{
+  background-color: rgb(255, 255, 255);
+  box-shadow: 3px 3px 10px rgb(216, 216, 216);
+  padding: 20px;
+  margin-top: 30px;
+}
+.totalprice{
+  display: flex;
+  justify-content: space-between;
+}
+.totalitems{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.bold{
+  font-weight: 600;
+}
+h3{
+  text-align: center;
+}
+.success-message{
+  padding: 6px 15px;
+  background-color: var(--malta);
+  color: #fff;
+  width: max-content;
+  margin: 0 auto;
+  position: fixed;
+  top: 0px;
+  left: 50%;
+  transform: translate(-50%);
+  transition: .5s;
+  font-size: 20px;
+}
+.s-message{
+  top: 100px;
+}
+.check-btn{
+  margin-top: 50px;
+  width: 100%;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+
+/*? Successful page css */
+
+.success-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 120px);
+ text-align: center;
+}
+.success-img{
+  width: 500px;
+}
+.s-title{
+  font-size: 40px;
+  margin:7px 0;
+}
